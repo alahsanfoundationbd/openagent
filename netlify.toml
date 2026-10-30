@@ -1,0 +1,14 @@
+# Netlify configuration for OpenAgent Web frontend
+[build]
+  base = "web"
+  command = "yarn build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "22"
+  YARN_FLAGS = "--ignore-engines"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
